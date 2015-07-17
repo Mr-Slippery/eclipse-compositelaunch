@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CompositeLaunch
+Bundle-SymbolicName: ro.aquacola.compositelaunch.ui;singleton:=true
+Bundle-Version: 1.0.0.1
+Bundle-Activator: ro.aquacola.compositelaunch.ui.CompositeLaunchUIActivator
+Bundle-Vendor: AquaCola
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.debug.core,
+ org.eclipse.debug.ui,
+ org.eclipse.core.filesystem,
+ org.eclipse.ui.forms,
+ ro.aquacola.compositelaunch
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: ro.aquacola.compositelaunch.ui

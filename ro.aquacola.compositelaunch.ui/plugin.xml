@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>  
+	<extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            icon="$nl$/icons/full/obj16/compositelaunch.gif"
+            configTypeID="%ro.aquacola.compositelaunch.id"
+            id="ro.aquacola.compositelaunch.launchimage">
+      </launchConfigurationTypeImage>
+   </extension>
+   
+	<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+		<launchConfigurationTabGroup
+        class="ro.aquacola.compositelaunch.ui.CompositeLaunchConfigurationTabGroup"
+        description="Create a composite configuration"
+        id="ro.aquacola.CompositeLaunchTabGroup"
+        type="%ro.aquacola.compositelaunch.id">
+     <launchMode
+           mode="debug"
+           perspective="org.eclipse.debug.ui.DebugPerspective">
+     </launchMode>
+     <launchMode
+           mode="run">
+     </launchMode>
+     <launchMode
+           mode="profile">
+     </launchMode>
+		</launchConfigurationTabGroup>
+	</extension>
+<!-- Unreliable ordering - they can switch positions, so defined in the TabGroup class instead
+	<extension point="org.eclipse.debug.ui.launchConfigurationTabs">
+	    <tab
+	          class="ro.aquacola.compositelaunch.ui.CompositeLaunchConfigurationTab"
+	          group="ro.aquacola.CompositeLaunchTabGroup"
+	          id="ro.aquacola.compositelaunch.CompositeLaunchConfigurationTab"
+	          name="Composite configuration">
+	    </tab>
+	    <tab
+	          class="ro.aquacola.compositelaunch.ui.CompositeLaunchModesTab"
+	          group="ro.aquacola.CompositeLaunchTabGroup"
+	          id="ro.aquacola.compositelaunch.CompositeLaunchModesTab"
+	          name="Launch modes">
+	    </tab>			    		
+	</extension>
+-->	
+</plugin>
